@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="\\192.168.1.196\Share\Honeycomb\static\styles\chat.css">
+    <script src="https://unpkg.com/htmx.org"></script>
+    <script src="https://unpkg.com/htmx.org/dist/ext/ws.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  </head>
+<body>
+    <div hx-ext="ws" ws-connect="/echo">
+    <div class="relative">
+        <div class="flex flex-row">
+          <div class="w-1/6"></div>
+          <div id="chat">
+            
+        </div>
+          <div class="w-1/6"></div>
+        </div>
+      
+        <!-- Sticky Input-Feld -->
+        <div class="fixed bottom-20 w-full">
+          <div class="flex w-full flex-row">
+            <div class="w-1/6"></div>
+            <div class="w-2/3">
+              <label class="focus group relative flex flex-col-reverse">
+                <form id="form" ws-send>
+                <input name="user_promt" class="rounded-sm border-2 border-black px-4 py-3 leading-9" />
+            </form>
+            </label>
+            </div>
+            <div class="w-1/6"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+</body>
+</html>

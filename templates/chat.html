@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="\\192.168.1.196\Share\Honeycomb\static\styles\chat.css">
+    <script src="https://unpkg.com/htmx.org"></script>
+    <script src="https://unpkg.com/htmx.org/dist/ext/ws.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  </head>
+<body>
+
+
+    
+
+    
+
+      <div class="flex flex-row">
+        <div class="basis-1/4">
+            <div class="w-full text-center text-lg font-extrabold sm:w-fit sm:text-left">
+                <span class="text-yellow-400">Honey</span>
+                <span class="dark:text-slate-400">Comb</span>
+              </div>
+        </div>
+        <div class="basis-2/4"></div>
+        <div class="basis-1/3">
+            <div class="flex flex-row">
+                <div class="basis-1/4">About</div>
+                <div class="basis-1/4">Help</div>
+                <div class="basis-1/2">Docs</div>
+              </div>
+        </div>
+      </div>
+
+
+    <div hx-ext="ws" ws-connect="/echo">
+        <div id="notifications"></div>
+        
+        <div class="flex flex-col justify-end items-center h-screen"></div>
+        <form id="form" ws-send class="border border-gray-300 p-2">>
+            <input name="user_promt">
+        </form>
+    </div>
+        
+
+    </div>
+
+    
+    
+    
+</body>
+</html>
